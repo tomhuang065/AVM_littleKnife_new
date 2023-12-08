@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import {Table , Card ,Button, Accordion} from '@themesberg/react-bootstrap';
+import {Table , Card ,Button} from '@themesberg/react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus , faFileAlt , faEdit , faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPlus , faEdit , faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import RemoveModal from '../pages/examples/BomEditForm';
+
+import RemoveModal from '../pages/Modals/BomEditForm';
 import { useChat } from "../api/context";
-import { AddBOMModal2 } from '../pages/examples/BomModal';
+import { AddBOMModal2 } from '../pages/Modals/BomModal';
 
 
 function ProductTable({data }, {data2},) {

@@ -1,6 +1,5 @@
 import mysql from 'mysql2';
 
-
 export default {
   connect: () => {
   const connection = mysql.createConnection({

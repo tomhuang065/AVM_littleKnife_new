@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faFileAlt, faUpload } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Form, Button, ButtonGroup, Modal,Table, Nav, Tab, Breadcrumb, InputGroup, Dropdown } from '@themesberg/react-bootstrap';
+import { Col, Row, Form, Button, ButtonGroup,  Nav, Tab, Dropdown } from '@themesberg/react-bootstrap';
 import axios from "axios";
-import { useChat } from "../api/context";
-import accRows from "./data/accountData"
 import moment from "moment";
 import ExcelJs from "exceljs";
+
+import { useChat } from "../api/context";
+import accRows from "./data/accountData"
 import {TransactionTable} from "../components/TransactionTable"
 var xlsx = require("xlsx")
 
-// FontAwesome.library.add(faCheckSquare, faCoffee);
-
-
 export default () => {
-  const {val, setVal, sendValue, signIn, userData} = useChat();
+  const { userData} = useChat();
 
   const [valueResult, setValueResult] = useState([]);
   const instance = axios.create({baseURL:'http://localhost:5000/api/avm'});
@@ -25,8 +23,6 @@ export default () => {
   const [accountResult, setAccountResult] = useState([]);
   const [thirdAccountResult, setThirdAccountResult] = useState([]);
   const [accountThird, setAccountThird] = useState({third :"", thirdCn : "選擇三階會計科目代碼"})
-  // const [accountFourth, setAccountFourth] = useState({fourth: "", fourthCn :"選擇四階會計科目代碼"})
-  // const [valueTarget, setValueTarget] = useState({tarNum:"", tarName:"選擇價值標的"})
   const [searchInd3, setSearchInd3] = useState("")
   const [searchInd4, setSearchInd4] = useState("")
   const [searchIndV, setSearchIndV] = useState("")
@@ -47,8 +43,6 @@ export default () => {
     target_name:"選擇價值標的",
     supplier_num:"",
     supplier_name:"選擇供應商",
-    // user: userData.Username,
-    // Add other fields as needed
   });
   const [deleteInd, setDeleteInd] = useState(false)
 

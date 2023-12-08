@@ -1,5 +1,3 @@
-
-
 export default [
     ['411', '銷貨收入 ', 'sales revenue', '4111', '銷貨收入 ', 'sales revenue']
     ,

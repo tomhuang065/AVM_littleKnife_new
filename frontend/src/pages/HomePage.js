@@ -3,30 +3,23 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { Routes } from "../routes";
 
 // pages
-import Presentation from "./examples/Signin";
-// import Upgrade from "./Upgrade";
-import DashboardOverview from "./dashboard/DashboardOverview";
+import Presentation from "./Signin";
+import DashboardOverview from "./DashboardOverview";
 import Transactions from "./Transactions";
 import Purchase from "./Purchase";
-import Settings from "./Settings";
-import BootstrapTables from "./tables/BootstrapTables";
-import Signin from "./examples/Signin";
-import Signup from "./examples/Signup";
-// import ForgotPassword from "./examples/ForgotPassword";
-import ResetPassword from "./examples/ResetPassword";
-// import Lock from "./examples/Lock";
-import NotFoundPage from "./examples/NotFound";
-import ServerError from "./examples/ServerError";
-import Valuetargets from "./examples/Valuetargets";
-import Accountingsettings from "./examples/Accountingsettings";
-import Supplierssettings from "./examples/Supplierssettings";
-import BeginningInventorysettings from "./examples/BeginningInventorysettings";
-import Bomsettings from "./examples/Bomsettings";
-import ChangeProfile from "./changeprofile";
+import Settings from "./UserSettings";
+import BootstrapTables from "../components/BootstrapTables";
+import Signin from "./Signin";
+import Signup from "./Signup";
+import ResetPassword from "./ResetPassword";
+import Valuetargets from "./ValueTargetSettings";
+import Accountingsettings from "./AccountingSetting";
+import Supplierssettings from "./SuppliersSettings";
+import BeginningInventorysettings from "./BeginningInventorySettings";
+import Bomsettings from "./BomsSettings";
 
 // components
 import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Preloader from "../components/Preloader";
 import { useChat } from "../api/context";
@@ -86,7 +79,7 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
         <Sidebar />
 
         <main className="content">
-          <Navbar />
+          {/* <Navbar /> */}
           <Component {...props} />
           <Footer toggleSettings={toggleSettings} showSettings={showSettings} />
         </main>
@@ -102,12 +95,12 @@ export default () => (
     <RouteWithLoader exact path={Routes.Signin.path} component={Signin} />
     <RouteWithLoader exact path={Routes.Signup.path} component={Signup} />
     <RouteWithLoader exact path={Routes.ResetPassword.path} component={ResetPassword} />
-    <RouteWithLoader exact path={Routes.NotFound.path} component={NotFoundPage} />
-    <RouteWithLoader exact path={Routes.ServerError.path} component={ServerError} />
+    {/* <RouteWithLoader exact path={Routes.NotFound.path} component={NotFoundPage} /> */}
+    {/* <RouteWithLoader exact path={Routes.ServerError.path} component={ServerError} /> */}
 
     {/* pages */}
     <RouteWithSidebar exact path={Routes.DashboardOverview.path} component={DashboardOverview} />
-    <RouteWithSidebar exact path={Routes.ChangeProfile.path} component={ChangeProfile} />
+    {/* <RouteWithSidebar exact path={Routes.ChangeProfile.path} component={ChangeProfile} /> */}
     <RouteWithSidebar exact path={Routes.Purchase.path} component={Purchase} />
     <RouteWithSidebar exact path={Routes.Transactions.path} component={Transactions} />
     <RouteWithSidebar exact path={Routes.Settings.path} component={Settings} />
@@ -118,6 +111,6 @@ export default () => (
     <RouteWithSidebar exact path={Routes.BeginningInventorysettings.path} component={BeginningInventorysettings} />
     <RouteWithSidebar exact path={Routes.Bomsettings.path} component={Bomsettings} />
 
-    <Redirect to={Routes.NotFound.path} />
+    <Redirect to={Routes.Signin.path} />
   </Switch>
 );

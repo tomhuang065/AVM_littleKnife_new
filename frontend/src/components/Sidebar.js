@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 import { useChat } from "../api/context";
 import { Routes } from "../routes";
-import ReactHero from "../assets/img/technologies/react-hero-logo.svg";
 
 export default (props = {}) => {
   const location = useLocation();

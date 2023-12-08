@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit,faTrashAlt  } from '@fortawesome/free-solid-svg-icons';
 import {Card, Button, Table } from '@themesberg/react-bootstrap';
 import moment from "moment";
-import RemoveModal from "../pages/examples/BeginningInventoryEditForm"
+import RemoveModal from "../pages/Modals/BeginningInventoryEditForm"
 
 export const RawMaterialInventoryTable = (props) => {
     const [removeModal, setRemoveModal] = useState(false);

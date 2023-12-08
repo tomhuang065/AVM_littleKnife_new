@@ -1,10 +1,7 @@
-import ExcelJS from "exceljs";
-import XLSX from 'xlsx';
 import express from 'express'
 import cors from 'cors'
-import mysql from 'mysql2';
 import MySQL from "./src/connection.js";
-import avmRoute from './src/route/avm.js'
+import avmRoute from './src/route/route.js'
 import bodyParser from "body-parser";
 
 MySQL.connect();

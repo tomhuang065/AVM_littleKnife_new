@@ -1,12 +1,13 @@
 
 import React from "react";
 import axios from 'axios';
-import {useState, useEffect} from "react";
+import {useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { Form, Nav, Card, Button, Table, Dropdown, ProgressBar,  InputGroup, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
-import RemoveModal from "../pages/examples/TransactionEditFormModal"
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { Card, Button, Table } from '@themesberg/react-bootstrap';
 import moment from "moment";
+
+import RemoveModal from "../pages/Modals/TransactionEditForm"
 import { useChat } from "../api/context";
 
 

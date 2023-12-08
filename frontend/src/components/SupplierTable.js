@@ -2,11 +2,12 @@ import React from "react";
 import axios from 'axios';
 import {useState, useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { Form, Nav, Card, Button, Table, Dropdown, ProgressBar,  InputGroup, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { Card, Button, Table } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
-import RemoveModal from "../pages/examples/SupplierEditForm"
 import moment from "moment";
+import RemoveModal from "../pages/Modals/SupplierEditForm"
+
 import { useChat } from "../api/context";
 import { Routes } from "../routes";
 

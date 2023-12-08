@@ -1,7 +1,7 @@
 
 import React from "react";
 import moment from "moment-timezone";
-import { Row, Col, Card} from '@themesberg/react-bootstrap';
+import { Row, Col} from '@themesberg/react-bootstrap';
 
 
 export default (props) => {
